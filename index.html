@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#a6d9bb" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='84'%3E%E2%9C%BF%3C/text%3E%3C/svg%3E" />
+  <title>Willow Bay — A Little Life</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <canvas id="world" aria-label="Willow Bay game world"></canvas>
+    <div class="vignette"></div>
+    <header class="topbar">
+      <div class="brand"><div class="brand-mark">✿</div><div><strong>WILLOW BAY</strong><small>YOUR LITTLE LIFE</small></div></div>
+      <div class="day-card"><span class="sun-icon">☀</span><div><strong id="day-label">MONDAY · DAY 1</strong><small id="weather-label">SUNNY · SPRING</small></div><b id="clock">08:00</b></div>
+      <div class="wallet"><span>✦</span><strong id="coins">24</strong><small>shells</small></div>
+    </header>
+    <section class="welcome" id="welcome">
+      <div class="welcome-card">
+        <div class="welcome-flower">✿</div>
+        <p class="eyebrow">A PLACE TO BREATHE</p>
+        <h1>Make a little<br/><em>life of your own.</em></h1>
+        <p class="welcome-copy">A quiet island, a friendly face, and all the time in the world. Welcome home.</p>
+        <button id="start-btn" class="primary-btn">Step into Willow Bay <span>→</span></button>
+        <div class="welcome-note"><span>⌨</span> WASD / arrows to wander <i>·</i> E to interact</div>
+      </div>
+      <div class="welcome-art"><span class="art-sun"></span><span class="art-cloud cloud-one"></span><span class="art-cloud cloud-two"></span><span class="art-house">⌂</span><span class="art-flower flower-one">✿</span><span class="art-flower flower-two">✿</span><span class="art-leaf">〰</span></div>
+    </section>
+    <aside class="quest-card" id="quest-card">
+      <div class="quest-top"><span class="quest-icon">✧</span><div><small>TODAY'S LITTLE PLAN</small><strong id="quest-title">A warm welcome</strong></div><button id="quest-toggle" aria-label="Collapse plan">−</button></div>
+      <div class="quest-progress"><div class="progress-track"><i id="quest-progress"></i></div><span id="quest-count">0 / 3</span></div>
+      <p id="quest-hint">Say hello to Mabel, then gather a few things.</p>
+    </aside>
+    <div class="location-pill"><span class="location-dot"></span><span id="location">CLOVER MEADOW</span></div>
+    <div class="toast" id="toast"></div>
+    <div class="interaction" id="interaction"><span class="keycap">E</span><span id="interaction-label">Talk</span></div>
+    <div class="bottom-ui">
+      <div class="inventory-card"><div class="inventory-title"><span>YOUR POCKETS</span><small id="inv-total">0 items</small></div><div class="inventory-slots" id="inventory"></div></div>
+      <div class="controls-hint"><span class="keycap">WASD</span><small>move</small><span class="keycap">E</span><small>use</small></div>
+      <button class="sound-btn" id="sound-btn" title="Toggle ambience">♫ <span>sound off</span></button>
+    </div>
+    <div class="touch-controls" aria-label="Touch movement controls"><button data-dir="up">▲</button><div><button data-dir="left">◀</button><button data-dir="down">▼</button><button data-dir="right">▶</button></div><button class="touch-use" id="touch-use">USE</button></div>
+    <div class="modal-backdrop" id="modal-backdrop"><div class="modal-card" id="modal-card"></div></div>
+    <div class="save-note" id="save-note">✿ saved</div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
